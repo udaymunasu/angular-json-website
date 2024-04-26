@@ -13,17 +13,28 @@ export class ProductDetailsComponent implements OnInit {
   productQuantity: number = 1;
   removeCart = false;
   cartData: product | undefined;
+
+  reviewText: string = '';
+  ratingValue: number | undefined;
+
+  reviews: any[] = [];
+  userId: number;
+  productId: any
+
   constructor(
     private activeRoute: ActivatedRoute,
     private product: ProductsService
   ) {}
 
   ngOnInit(): void {
+    debugger
     let productId = this.activeRoute.snapshot.paramMap.get('productId');
-    console.warn(productId);
+    this.productId = productId
     productId &&
       this.product.getProduct(productId).subscribe((result) => {
         this.productData = result;
+        console.warn('this.productData', this.productData);
+
         let cartData = localStorage.getItem('localCart');
         if (productId && cartData) {
           let items = JSON.parse(cartData);
@@ -40,6 +51,7 @@ export class ProductDetailsComponent implements OnInit {
         let user = localStorage.getItem('user');
         if (user) {
           let userId = user && JSON.parse(user).id;
+          this.userId = user && JSON.parse(user).id;
           this.product.getCartList(userId);
 
           this.product.cartData.subscribe((result) => {
@@ -54,7 +66,9 @@ export class ProductDetailsComponent implements OnInit {
           });
         }
       });
+      this.getReviews()
   }
+
   handleQuantity(val: string) {
     if (this.productQuantity < 20 && val === 'plus') {
       this.productQuantity += 1;
@@ -87,6 +101,7 @@ export class ProductDetailsComponent implements OnInit {
       }
     }
   }
+
   removeToCart(productId: number) {
     if (!localStorage.getItem('user')) {
       this.product.removeItemFromCart(productId);
@@ -101,5 +116,47 @@ export class ProductDetailsComponent implements OnInit {
         });
     }
     this.removeCart = false;
+  }
+
+  submitReview() {
+    if (this.productData) {
+      if (this.ratingValue && this.reviewText) {
+        let user: any = localStorage.getItem('user');
+        let userId = user && JSON.parse(user).id;
+
+        console.log('userId in review', userId, user);
+        const reviewData: any = {
+          userData: JSON.parse(user),
+          productId: this.productData.id,
+          rating: this.ratingValue,
+          review: this.reviewText,
+          userId: userId,
+        };
+        console.log("reviewData", reviewData)
+        this.product.submitReview(reviewData).subscribe(
+          (result) => {
+            console.log('Review submitted successfully:', result);
+            this.ratingValue = undefined;
+            this.reviewText = '';
+          },
+          (error) => {
+            console.error('Error submitting review:', error);
+          }
+        );
+      } else {
+        console.error('Rating and review are required.');
+      }
+    }
+  }
+
+  getReviews() {
+    this.product.getReviewsByProduct(this.productId).subscribe(
+      (reviews) => {
+        this.reviews = reviews;
+      },
+      (error) => {
+        console.error('Error fetching reviews:', error);
+      }
+    );
   }
 }

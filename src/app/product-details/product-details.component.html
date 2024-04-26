@@ -8,19 +8,17 @@
       <h3>Price : {{ productData.price }}</h3>
       <div>
         Color :
-        <h3
-          [style.backgroundColor]="productData.color"
-          class="product-color"
-        ></h3>
+        <h3 [style.backgroundColor]="productData.color" class="product-color"></h3>
       </div>
-      <h6>Category : {{ productData.category }}</h6>
+      <h6>Category :</h6>
+      <ul>
+        <li *ngFor="let categoryName of productData.category.name">
+          {{ categoryName }}
+        </li>
+      </ul>
       <h6>Description : {{ productData.description }}</h6>
       <button class="form-button">Buy Now</button>
-      <button
-        *ngIf="removeCart"
-        class="form-button"
-        (click)="removeToCart(productData.id)"
-      >
+      <button *ngIf="removeCart" class="form-button" (click)="removeToCart(productData.id)">
         Remove to Cart
       </button>
       <button *ngIf="!removeCart" class="form-button" (click)="addToCart()">
@@ -32,5 +30,26 @@
         <button (click)="handleQuantity('plus')">+</button>
       </div>
     </div>
+  </div>
+
+
+  <!-- Review section -->
+  <div class="col-sm-12">
+    <h3>Rate and Review</h3>
+    <div>
+      <label for="rating">Rating:</label>
+      <input type="number" name="rating" id="rating" [(ngModel)]="ratingValue" min="1" max="5" />
+    </div>
+    <div>
+      <label for="review">Review:</label>
+      <textarea name="review" id="review" [(ngModel)]="reviewText" rows="4"></textarea>
+    </div>
+    <button class="form-button" (click)="submitReview()">Submit Review</button>
+  </div>
+
+  <div *ngFor="let review of reviews">
+    <p><strong>Rating:</strong> {{ review.rating }}</p>
+    <p><strong>Review:</strong> {{ review.review }}</p>
+    <hr>
   </div>
 </div>

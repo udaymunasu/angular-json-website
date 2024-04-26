@@ -10,6 +10,7 @@ export class ProductsService {
   cartData = new EventEmitter<product[] | []>();
 
   constructor(private http: HttpClient) {}
+  private baseUrl = 'http://localhost:3000'; // Your API base URL
 
   addProductCategory(category: any) {
     return this.http.post('http://localhost:3000/productCategory', category);
@@ -128,4 +129,15 @@ export class ProductsService {
   cancelOrder(orderId: number) {
     return this.http.delete('http://localhost:3000/orders/' + orderId);
   }
+
+
+  submitReview(reviewData: any): Observable<any> {
+    return this.http.post<any>(`http://localhost:3000/reviews`, reviewData);
+  }
+
+  getReviewsByProduct(productId: number): Observable<any[]> {
+    return this.http.get<any[]>(`${this.baseUrl}/reviews?productId=${productId}`);
+  }
+
+
 }

@@ -20,7 +20,9 @@ export interface login {
 export interface product {
   name: string;
   price: number;
-  category: string;
+  category: {
+    name: string
+  };
   color: string;
   image: string;
   description: string;
@@ -31,7 +33,9 @@ export interface product {
 export interface cart {
   name: string;
   price: number;
-  category: string;
+  category?: {
+    name: string
+  };
   color: string;
   image: string;
   description: string;

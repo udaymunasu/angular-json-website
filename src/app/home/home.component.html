@@ -16,13 +16,13 @@
   </ng-container>
 </div>
 
-<div class="product-list">
+<div class="product-list" >
   <div
     class="product-card"
     *ngFor="let product of filteredProducts"
     [@fadeInOut]
   >
-    <div class="card">
+    <div class="card" routerLink="/details/{{product.id}}">
       <div class="image-container">
         <img
           [src]="product.image ? product.image : ''"

@@ -8,6 +8,7 @@ import { SearchComponent } from './search/search.component';
 import { CartPageComponent } from './cart-page/cart-page.component';
 import { CheckoutComponent } from './checkout/checkout.component';
 import { UserUpdateComponent } from './user-update/user-update.component';
+import { MyOrdersComponent } from './my-orders/my-orders.component';
 
 const routes: Routes = [
   {
@@ -39,10 +40,10 @@ const routes: Routes = [
     path: 'user-update',
   },
   { path: 'seller', loadChildren: () => import('./seller/seller.module').then(m => m.SellerModule) },
-  // {
-  //   component: MyOrdersComponent,
-  //   path: 'my-orders',
-  // },
+  {
+    component: MyOrdersComponent,
+    path: 'my-orders',
+  },
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

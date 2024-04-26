@@ -195,23 +195,6 @@
       "id": 50
     },
     {
-      "name": "testing",
-      "price": 300,
-      "category": {
-        "name": [
-          "home and kitchen",
-          "testing"
-        ],
-        "image": "https://images.pexels.com/photos/6933852/pexels-photo-6933852.jpeg?auto=compress&cs=tinysrgb&w=600"
-      },
-      "color": "bnnn",
-      "description": "1k2bed",
-      "image": "",
-      "id": 12000000000000,
-      "quantity": 222,
-      "productId": 2222
-    },
-    {
       "name": "some data",
       "price": "788",
       "category": {
@@ -225,22 +208,6 @@
       "description": "",
       "image": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcSOO1JDPUNwcPiqzHYhaL_zpJA0Ymlr6mD9sSgTPad_JYdrk-o",
       "id": 12000000000001
-    },
-    {
-      "name": "text data ",
-      "price": 233,
-      "category": {
-        "name": [
-          "toys"
-        ],
-        "image": ""
-      },
-      "color": "eww",
-      "description": "kajdckqd",
-      "image": "data:image/jpeg;base64,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",
-      "id": 233,
-      "quantity": 333,
-      "productId": 555
     }
   ],
   "users": [
@@ -255,55 +222,15 @@
       "mobile": "9515099037",
       "profilepic": "https://images.pexels.com/photos/1043474/pexels-photo-1043474.jpeg?auto=compress&cs=tinysrgb&w=600",
       "createdat": "2024-04-26T12:32:49.928Z"
-    }
-  ],
-  "cart": [
-    {
-      "name": "HP Laptop",
-      "price": "50000",
-      "category": "Laptop",
-      "color": "black",
-      "description": "Hp laptop for student and professionals",
-      "image": "https://www.91-cdn.com/hub/wp-content/uploads/2022/07/Top-laptop-brands-in-India.jpg",
-      "quantity": 1,
-      "productId": 3,
-      "userId": 1,
-      "id": 1
     },
     {
-      "name": "HP Laptop",
-      "price": "50000",
-      "category": "Laptop",
-      "color": "black",
-      "description": "Hp laptop for student and professionals",
-      "image": "https://www.91-cdn.com/hub/wp-content/uploads/2022/07/Top-laptop-brands-in-India.jpg",
-      "quantity": 1,
-      "productId": 3,
+      "name": "sai",
+      "email": "sai@gmail.com",
+      "password": "123456",
       "id": 2
-    },
-    {
-      "name": "HP Laptop",
-      "price": "50000",
-      "category": "Laptop",
-      "color": "black",
-      "description": "Hp laptop for student and professionals",
-      "image": "https://www.91-cdn.com/hub/wp-content/uploads/2022/07/Top-laptop-brands-in-India.jpg",
-      "quantity": 1,
-      "productId": 3,
-      "id": 3
-    },
-    {
-      "name": "HP Laptop",
-      "price": "50000",
-      "category": "Laptop",
-      "color": "black",
-      "description": "Hp laptop for student and professionals",
-      "image": "https://www.91-cdn.com/hub/wp-content/uploads/2022/07/Top-laptop-brands-in-India.jpg",
-      "quantity": 2,
-      "productId": 3,
-      "id": 4
     }
   ],
+  "cart": [],
   "orders": [
     {
       "email": "udaymunasu311999@gmail.com",
@@ -320,6 +247,133 @@
       "totalPrice": 650,
       "userId": 1,
       "id": 2
+    },
+    {
+      "email": "udaymunasu311999@gmail.com",
+      "address": "3-6-7 Indiranagar, Ramanthapur, 3-6-7 indira nagar ramanthapur",
+      "contact": "0951 509 9037",
+      "totalPrice": 50100,
+      "userId": 1,
+      "id": 3
+    },
+    {
+      "email": "udaymunasu311999@gmail.com",
+      "address": "3-6-7 Indiranagar, Ramanthapur, 3-6-7 indira nagar ramanthapur",
+      "contact": "0951 509 9037",
+      "totalPrice": 102100,
+      "userId": 2,
+      "id": 4
+    },
+    {
+      "email": "udaymunasu311999@gmail.com",
+      "address": "3-6-7 Indiranagar, Ramanthapur, 3-6-7 indira nagar ramanthapur",
+      "contact": "0951 509 9037",
+      "totalPrice": 17100,
+      "userId": 2,
+      "id": 5
+    }
+  ],
+  "reviews": [
+    {
+      "productId": 3,
+      "rating": 3,
+      "review": "review for product",
+      "userId": null,
+      "id": 1
+    },
+    {
+      "productId": 3,
+      "rating": 4,
+      "review": "HP Laptop Review",
+      "userId": 1,
+      "id": 2
+    },
+    {
+      "productId": 3,
+      "rating": 6,
+      "review": "hello",
+      "userId": 1,
+      "id": 3
+    },
+    {
+      "productId": 3,
+      "rating": 8,
+      "review": "nmnm",
+      "userId": 1,
+      "id": 4
+    },
+    {
+      "productId": 4,
+      "rating": 10,
+      "review": "The best running shoes",
+      "userId": 1,
+      "id": 5
+    },
+    {
+      "user": {
+        "user": "{\"id\":1,\"firstName\":\"Munasu\",\"lastName\":\"Uday kumar\",\"email\":\"uday@gmail.com\",\"password\":\"123456\",\"address\":\"3-6-7 Indiranagar ramanthapur hyderabad\",\"dob\":\"1999-07-31\",\"mobile\":\"9515099037\",\"profilepic\":\"https://images.pexels.com/photos/1043474/pexels-photo-1043474.jpeg?auto=compress&cs=tinysrgb&w=600\",\"createdat\":\"2024-04-26T12:32:49.928Z\"}"
+      },
+      "productId": 4,
+      "rating": 5,
+      "review": "hghgh",
+      "userId": 1,
+      "id": 6
+    },
+    {
+      "userData": [
+        "{\"id\":1,\"firstName\":\"Munasu\",\"lastName\":\"Uday kumar\",\"email\":\"uday@gmail.com\",\"password\":\"123456\",\"address\":\"3-6-7 Indiranagar ramanthapur hyderabad\",\"dob\":\"1999-07-31\",\"mobile\":\"9515099037\",\"profilepic\":\"https://images.pexels.com/photos/1043474/pexels-photo-1043474.jpeg?auto=compress&cs=tinysrgb&w=600\",\"createdat\":\"2024-04-26T12:32:49.928Z\"}"
+      ],
+      "productId": 4,
+      "rating": 7,
+      "review": "nnnm",
+      "userId": 1,
+      "id": 7
+    },
+    {
+      "userData": "{\"id\":1,\"firstName\":\"Munasu\",\"lastName\":\"Uday kumar\",\"email\":\"uday@gmail.com\",\"password\":\"123456\",\"address\":\"3-6-7 Indiranagar ramanthapur hyderabad\",\"dob\":\"1999-07-31\",\"mobile\":\"9515099037\",\"profilepic\":\"https://images.pexels.com/photos/1043474/pexels-photo-1043474.jpeg?auto=compress&cs=tinysrgb&w=600\",\"createdat\":\"2024-04-26T12:32:49.928Z\"}",
+      "productId": 4,
+      "rating": 3,
+      "review": "bbds",
+      "userId": 1,
+      "id": 8
+    },
+    {
+      "userData": {
+        "id": 1,
+        "firstName": "Munasu",
+        "lastName": "Uday kumar",
+        "email": "uday@gmail.com",
+        "password": "123456",
+        "address": "3-6-7 Indiranagar ramanthapur hyderabad",
+        "dob": "1999-07-31",
+        "mobile": "9515099037",
+        "profilepic": "https://images.pexels.com/photos/1043474/pexels-photo-1043474.jpeg?auto=compress&cs=tinysrgb&w=600",
+        "createdat": "2024-04-26T12:32:49.928Z"
+      },
+      "productId": 4,
+      "rating": 4,
+      "review": "4 is the best review",
+      "userId": 1,
+      "id": 9
+    },
+    {
+      "userData": {
+        "id": 1,
+        "firstName": "Munasu",
+        "lastName": "Uday kumar",
+        "email": "uday@gmail.com",
+        "password": "123456",
+        "address": "3-6-7 Indiranagar ramanthapur hyderabad",
+        "dob": "1999-07-31",
+        "mobile": "9515099037",
+        "profilepic": "https://images.pexels.com/photos/1043474/pexels-photo-1043474.jpeg?auto=compress&cs=tinysrgb&w=600",
+        "createdat": "2024-04-26T12:32:49.928Z"
+      },
+      "productId": 5,
+      "rating": 6,
+      "review": "Best Jeans",
+      "userId": 1,
+      "id": 10
     }
   ]
 }
