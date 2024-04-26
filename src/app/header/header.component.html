@@ -1,0 +1,58 @@
+<nav class="nav">
+  <h1><a routerLink="">E-Comm</a></h1>
+  <div class="nav-search">
+    <div class="input-bar">
+      <input
+        class="search-input"
+        type="text"
+        #searchInput
+        (keyup)="searchProduct($event)"
+        (blur)="hideSearch()"
+        placeholder="Search Products"
+      />
+      <button class="search-button" (click)="submitSearch(searchInput.value)">Search</button>
+    </div>
+    <ul class="suggested-search" *ngIf="searchResult">
+      <li *ngFor="let item of searchResult">
+        <a (mousedown)="redirectToDetails(item.id)">{{ item.name }}</a>
+      </li>
+    </ul>
+  </div>
+  <div [ngSwitch]="menuType">
+    <ul *ngSwitchCase="'default'">
+      <li><a routerLink="seller/seller-auth">Seller</a></li>
+      <li><a routerLink="">Home</a></li>
+      <li><a routerLink="user-auth">Login</a></li>
+
+      <li>
+        <a href="#">Cart({{ cartItems }})</a>
+      </li>
+    </ul>
+    <ul *ngSwitchCase="'user'">
+      <li><a routerLink="seller/seller-auth">Seller</a></li>
+      <li><a routerLink="">Home</a></li>      
+      <li><a routerLink="my-orders">My Orders</a></li>
+      <li><a (click)="userLogout()">Logout</a></li>
+
+      <li>
+        <a [routerLink]="cartItems > 0 ? 'cart-page' : null"
+          >Cart({{ cartItems }})</a
+        >
+      </li>
+      <li>
+        <a routerLink="/user-update">{{ userName }}</a>
+        <div class="user-avatar">
+          <img [src]="userImage" alt="Profile Picture">
+        </div>
+      </li>
+    </ul>
+    <ul *ngSwitchCase="'seller'">
+      <li><a routerLink="seller/seller-add-product">Add Product</a></li>
+      <li><a routerLink="seller/seller-home">List</a></li>
+      <li><a (click)="logout()">Logout</a></li>
+      <li>
+        <a class="seller/seller-name">{{ sellerName | uppercase }}</a>
+      </li>
+    </ul>
+  </div>
+</nav>
